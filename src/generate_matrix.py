@@ -1,16 +1,24 @@
+"""
+Generate the distance matrix for permutations of n symbols.
+
+The script creates the n,n-matrix in which the entry at position 
+i,j is the permutation distance between permutations i and j. 
+The indices maps to the permutations stored in an array 
+that is created alongside the matrix.
+
+The matrix and list are stored to a file given by the user.
+
+Usage:
+    python generate_matrix.py <number of symbols> <ouput path>
+
+where
+    <number of symbols> : number of symbols to permute.
+    <ouput path> : file to which the output should be saved.
+"""
 import sys
 from itertools import permutations, combinations
 import numpy as np
-
-
-def distance(seq1, seq2):
-    assert len(seq1) == len(seq2)
-    n = len(seq1)
-
-    for i in range(len(seq1)):
-        if seq1[i:] == seq2[:n - i]:
-            return i
-    return n
+from metrics import permutation_distance
 
 
 def generate_distance_matrix(n_symbols, file_path):
@@ -20,12 +28,12 @@ def generate_distance_matrix(n_symbols, file_path):
     n_perms = len(perms)
 
     distance_matrix = np.empty((n_perms, n_perms), 
-                               dtype=np.float16)
+                               dtype=np.int8)
 
     for i in range(n_perms):
         for j in range(n_perms):
             if i != j:
-                dist = distance(perms[i], perms[j])
+                dist = permutation_distance(perms[i], perms[j])
             else:
                 dist = 0
 
@@ -34,7 +42,6 @@ def generate_distance_matrix(n_symbols, file_path):
     np.savez(file_path, 
              permutations=perms, 
              distance_matrix=distance_matrix)
-
 
 
 def main():

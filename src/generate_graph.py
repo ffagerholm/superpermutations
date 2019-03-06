@@ -2,16 +2,8 @@ import sys
 import csv
 from itertools import permutations, combinations
 import numpy as np
+from metrics import permutation_distance
 
-
-def distance(seq1, seq2):
-    assert len(seq1) == len(seq2)
-    n = len(seq1)
-
-    for i in range(len(seq1)):
-        if seq1[i:] == seq2[:n - i]:
-            return i
-    return n
 
 
 def generate_permutation_graph(n_symbols, file_path):
@@ -26,14 +18,14 @@ def generate_permutation_graph(n_symbols, file_path):
                             quotechar='"', quoting=csv.QUOTE_MINIMAL)
         
         for perm1, perm2 in combinations(perms, 2):
-            weight1 = distance(perm1, perm2)
+            weight1 = permutation_distance(perm1, perm2)
             p1 = ''.join(perm1)
             p2 = ''.join(perm2)
             w1 = "{{'weight': {:.2f} }}".format(weight1)
             # add forward edge
             writer.writerow([p1, p2, w1])
             
-            weight2 = distance(perm2, perm1)
+            weight2 = permutation_distance(perm2, perm1)
             w2 = "{{'weight': {:.2f} }}".format(weight2)
             # add backward edge
             writer.writerow([p2, p1, w2])            

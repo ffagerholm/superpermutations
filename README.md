@@ -89,6 +89,11 @@ python src/find_superpermutation.py -h
 * [Numpy](http://www.numpy.org/): Matrices and arrays.
 * [Google OR-Tools](https://developers.google.com/optimization/): Routing optimization.
 
+## To do
+- [ ] Allow for weights to be calculated at runtime.  
+- [ ] Improve command line interface, add named parameters.  
+- [ ] Allow for selecting search strategy from command line.  
+
 ## Authors
 
 * **Fredrik Fagerholm** - [ffagerholm](https://github.com/ffagerholm)

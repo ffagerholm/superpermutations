@@ -94,7 +94,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## References
 
 [1] Houston, Robin ("2014"). "Tackling the Minimal Superpermutation Problem". arXiv e-prints, , arXiv:1408.5108.  
-[2] Johnston, Nathaniel ("2013"). "Non-Uniqueness of Minimal Superpermutations". arXiv e-prints, , arXiv:1303.4150.
-[3] https://github.com/superpermutators/superperm/tree/master/PermutationChains
-[4] https://groups.google.com/forum/#!topic/superpermutators/Ya-H_wwt_HY
-[5] https://github.com/superpermutators/superperm
+[2] Johnston, Nathaniel ("2013"). "Non-Uniqueness of Minimal Superpermutations". arXiv e-prints, , arXiv:1303.4150.  
+[3] https://github.com/superpermutators/superperm/tree/master/PermutationChains  
+[4] https://groups.google.com/forum/#!topic/superpermutators/Ya-H_wwt_HY  
+[5] https://github.com/superpermutators/superperm  

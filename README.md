@@ -91,7 +91,7 @@ Superpermutation length:
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-
+## References
 
 [1] Houston, Robin ("2014"). "Tackling the Minimal Superpermutation Problem". arXiv e-prints, , arXiv:1408.5108.  
 [2] Johnston, Nathaniel ("2013"). "Non-Uniqueness of Minimal Superpermutations". arXiv e-prints, , arXiv:1303.4150.

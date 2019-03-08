@@ -18,7 +18,7 @@ where
 import sys
 from itertools import permutations, combinations
 import numpy as np
-from metrics import permutation_distance
+from metrics import overlap_distance
 
 
 def generate_distance_matrix(n_symbols, file_path):
@@ -33,7 +33,7 @@ def generate_distance_matrix(n_symbols, file_path):
     for i in range(n_perms):
         for j in range(n_perms):
             if i != j:
-                dist = permutation_distance(perms[i], perms[j])
+                dist = overlap_distance(perms[i], perms[j])
             else:
                 dist = 0
 

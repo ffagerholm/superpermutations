@@ -6,7 +6,7 @@ import numpy as np
 from ortools.constraint_solver import pywrapcp
 from ortools.constraint_solver import routing_enums_pb2
 
-from metrics import permutation_distance
+from metrics import overlap_distance
 
 def check_superpermutation(permutations, superpermutation):
     return all(p in superpermutation for p in permutations)

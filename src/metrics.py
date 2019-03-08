@@ -1,13 +1,13 @@
 
-def permutation_distance(p1, p2):
-    """Measures the distance between two permutations of symbols.
+def overlap_distance(p1, p2):
+    """Measures the distance between two sequences of symbols.
 
-    The distance beetween two permutations is measued as the number of 
+    The distance beetween two sequences is measued as the number of 
     symbols that has to be concatenated to the second, and equally
-    many removed from the start of the permutation, to transform it
-    to the second permutation.
+    many removed from the start of the sequence, to transform it
+    to the second sequence.
 
-    For example, for the distance between the permutations 123 and 312 
+    For example, for the distance between the sequences 123 and 312 
     is 2, because 123 -> [12]3 . 12 -> 312  
     The brackets indicates that the substring "12" is removed, and the
     dot that the string "12" is concatenated.
@@ -22,21 +22,21 @@ def permutation_distance(p1, p2):
     not symmetric, for some p1, p2: distance(p1, p2) != distance(p2, p1).
 
     Args:
-        p1 (str): first permutation, could be a string, list
-        p2 (str): second permutation
+        p1 (str): first sequence, could be a string, list
+        p2 (str): second sequence
     
     Returns:
-        distance (int): permutation distance.
+        distance (int): overlap distance.
 
-    >>> permutation_distance("1234", "1234")
+    >>> overlap_distance("1234", "1234")
     0
-    >>> permutation_distance("1234", "4321")
+    >>> overlap_distance("1234", "4321")
     1
-    >>> permutation_distance("123", "312")
+    >>> overlap_distance("123", "312")
     2
-    >>> permutation_distance("132", "231")
+    >>> overlap_distance("132", "231")
     2
-    >>> permutation_distance("162534", "534612")
+    >>> overlap_distance("162534", "534612")
     3
     """
     n, m = len(p1), len(p2)

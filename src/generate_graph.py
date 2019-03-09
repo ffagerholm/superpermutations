@@ -3,14 +3,13 @@ import csv
 from itertools import permutations, combinations
 import numpy as np
 from metrics import overlap_distance
-
+from utils import list_permutations
 
 
 def generate_permutation_graph(n_symbols, file_path):
     """
     """
-    symbols = map(str, range(1, n_symbols + 1))
-    perms = permutations(symbols)
+    perms = list_permutations(n_symbols)
 
     # write graph to a csv-file as an edgelist
     with open(file_path, 'w') as csvfile:

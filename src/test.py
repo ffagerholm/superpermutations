@@ -1,5 +1,5 @@
 import unittest
-from metrics import permutation_distance
+from metrics import overlap_distance
 
 perm_distance_pairs = [
     (('123', '123'), 0),
@@ -13,7 +13,7 @@ class TestDistanceMetric(unittest.TestCase):
 
     def test_distance(self):
         for (p1, p2), true_dist in perm_distance_pairs:
-            dist = permutation_distance(p1, p2)
+            dist = overlap_distance(p1, p2)
             self.assertEqual(dist, true_dist)
 
 

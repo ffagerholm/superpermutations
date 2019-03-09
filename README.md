@@ -62,7 +62,7 @@ It is intractable to find the optimal solution to this problem even for small *n
 We use the algorithms found in the Google OR-Tools suite, which includes different search strategies, to find an approximate solution. 
 
 ## Usage
-To generate the weight matrix for *n = 4* symbols, run 
+To generate the weight matrix for *n = 4* symbols, run  
 ```
 python src/generate_matrix.py 4 data/weight_matrix.npz
 ```
@@ -91,8 +91,8 @@ python src/find_superpermutation.py -h
 
 ## To do
 - [ ] Allow for weights to be calculated at runtime.  
-- [ ] Improve command line interface, add named parameters.  
-- [ ] Allow for selecting search strategy from command line.  
+- [x] Improve command line interface, add named parameters.  
+- [x] Allow for selecting search strategy from command line.  
 
 ## Authors
 

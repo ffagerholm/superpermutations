@@ -66,9 +66,10 @@ To generate the weight matrix for $n = 4$ symbols, run
 ```
 python src/generate_matrix.py 4 data/weight_matrix.npz
 ```
+
 To search for superpermutation candidates, run
 ```
-python src/find_superpermutation.py data/weight_matrix.npz 11
+python src/find_superpermutation.py data/weight_matrix.npz
 ```
 The result will be printed out
 ```
@@ -77,6 +78,11 @@ Superpermutation:
 
 Superpermutation length:
 33
+```
+
+Too see command line options, run  
+```
+python src/find_superpermutation.py -h
 ```
 
 ## Built with
